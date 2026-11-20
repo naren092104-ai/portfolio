@@ -79,7 +79,7 @@ export const PROFILE: ProfileData = {
     'Alongside engineering, community service defines who I am. From mentoring government school students across Dharmapuri district with Talent Quest for India and Bhumi, to serving as Overall Coordinator of SM Volunteers and Volunteer Leader with Atchayam Trust, I believe technology creates lasting value only when it serves people.',
   ],
   highlights: [
-    { label: 'Focus', value: 'Full-Stack Engineering & Implementation' },
+    { label: 'Focus', value: 'Full-Stack Engineering & Social Work' },
     { label: 'Location', value: 'Tamil Nadu, India' },
     { label: 'Degree', value: 'B.Tech AI & Data Science (2022–2026)' },
     { label: 'Field Impact', value: 'Education, Rescue & Rural Outreach' },
