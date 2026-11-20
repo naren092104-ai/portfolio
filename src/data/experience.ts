@@ -12,15 +12,15 @@ export const EXPERIENCES: ExperienceEntry[] = [
   {
     id: 'bumbleb-kalvi40',
     period: '2026 – Present',
-    role: 'Implementation Coordinator',
-    organization: 'BumbleB Trust — Kalvi40',
+    role: 'Implementation Lead',
+    organization: 'Société Générale CSR — Kalasapakkam Block, Tiruvannamalai',
     type: 'Technology & Implementation',
     description:
-      'Coordinating grassroots educational technology implementations for the Kalvi40 initiative under BumbleB Trust—supporting government school rollouts, digital learning operations, field team coordination, and centralized district and block reporting.',
+      'Leading the CSR education initiative across 21 government schools in Kalasapakkam block, Tiruvannamalai, supporting school rollouts, digital learning operations, field-team coordination, and implementation reporting.',
     highlights: [
-      'Government school implementation & field coordination across districts and blocks',
-      'Supporting centralized tracking of school visits, attendance, and daily activities',
-      'Bridging digital learning systems with local school stakeholders and educators',
+      'Leading implementation across 21 government schools in Kalasapakkam block',
+      'Coordinating field teams, school visits, attendance, and daily activities',
+      'Working with school stakeholders to support digital learning through CSR',
     ],
   },
   {

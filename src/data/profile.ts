@@ -36,7 +36,7 @@ export const PROFILE: ProfileData = {
   initials: 'ND',
   name: 'Narendhar D',
   roles: [
-    'Implementation Coordinator',
+    'Implementation Lead',
     'Full-Stack Developer',
     'Education & Social Impact',
   ],

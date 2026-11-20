@@ -29,7 +29,6 @@ export function ScrollToTop() {
           initial={{ opacity: 0, scale: 0.7, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.7, y: 20 }}
-          whileHover={{ scale: 1.08, y: -4 }}
           whileTap={{ scale: 0.94 }}
           transition={{ type: 'spring', stiffness: 360, damping: 24 }}
           className="group fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-50 w-12 h-12 rounded-2xl bg-gradient-to-br from-[#3B82F6] via-[#6366F1] to-[#8B5CF6] p-[1.5px] shadow-[0_14px_34px_-6px_rgba(59,130,246,0.6)] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE]"
