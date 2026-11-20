@@ -3,6 +3,45 @@ import { GraduationCap, MapPin } from 'lucide-react';
 import { SectionHeading } from '../components/SectionHeading';
 import { PROFILE } from '../data/profile';
 
+const ABOUT_HIGHLIGHTS = [
+  'B.Tech in Artificial Intelligence and Data Science',
+  'K.S. Rangasamy College of Technology',
+  'practical software engineering',
+  'technology implementation',
+  'grassroots social impact',
+  'three and a half years',
+  'web platforms',
+  'institutional ERP systems',
+  'point-of-sale applications',
+  'volunteer management dashboards',
+  'Talent Quest for India',
+  'Overall Coordinator of SM Volunteers',
+  'Volunteer Leader with Atchayam Trust',
+  'Bhumi',
+];
+
+const ABOUT_HIGHLIGHT_PATTERN = new RegExp(
+  `(${ABOUT_HIGHLIGHTS.map((phrase) => phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`,
+  'gi',
+);
+
+function renderAboutParagraph(text: string) {
+  const highlightedPhrases = new Set(ABOUT_HIGHLIGHTS.map((phrase) => phrase.toLowerCase()));
+
+  return text.split(ABOUT_HIGHLIGHT_PATTERN).map((part, index) =>
+    highlightedPhrases.has(part.toLowerCase()) ? (
+      <span
+        key={`${part}-${index}`}
+        className="font-semibold text-[#67E8F9] decoration-[#22D3EE]/40 underline decoration-1 underline-offset-4"
+      >
+        {part}
+      </span>
+    ) : (
+      part
+    ),
+  );
+}
+
 export function About() {
   return (
     <section id="about" className="py-16 sm:py-24 lg:py-28 border-t border-slate-400/10">
@@ -23,7 +62,7 @@ export function About() {
             className="lg:col-span-7 space-y-5 text-sm sm:text-lg text-[#A5B4C8] leading-relaxed"
           >
             {PROFILE.aboutParagraphs.map((para, idx) => (
-              <p key={idx}>{para}</p>
+              <p key={idx}>{renderAboutParagraph(para)}</p>
             ))}
           </motion.div>
 
