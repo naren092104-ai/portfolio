@@ -13,12 +13,11 @@ export interface ProfileData {
   location: string;
   education: {
     degree: string;
-    institution: string;
-    period: string;
-    expectedGraduation: string;
-    academicHighlights: { label: string; value: string }[];
+    completed: string;
   };
   aboutParagraphs: string[];
+  aboutOrganizations: string[];
+  technicalInterests: string[];
   highlights: {
     label: string;
     value: string;
@@ -69,26 +68,41 @@ export const PROFILE: ProfileData = {
   resumeUrl: '/resume.pdf',
   location: 'Uthangarai, Krishnagiri, Tamil Nadu, India',
   education: {
-    degree: 'B.Tech in Artificial Intelligence and Data Science',
-    institution: 'K.S. Rangasamy College of Technology, Tiruchengode',
-    period: '2022 – 2026',
-    expectedGraduation: '2026',
-    academicHighlights: [
-      { label: 'CGPA', value: '7.48' },
-      { label: 'HSC', value: '95%' },
-      { label: 'SSLC', value: '83%' },
-    ],
+    degree: 'B.Tech – Artificial Intelligence and Data Science',
+    completed: 'May 2026',
   },
   aboutParagraphs: [
-    'I work at the intersection of practical software engineering, technology implementation, and grassroots social impact. Pursuing a B.Tech in Artificial Intelligence and Data Science at K.S. Rangasamy College of Technology, I have paired academic grounding in software systems with over three and a half years of active field leadership across Tamil Nadu.',
-    'On the technology side, I design and deploy real-world web platforms, institutional ERP systems, point-of-sale applications, and volunteer management dashboards—turning operational bottlenecks in education, NGOs, and local enterprises into dependable digital workflows.',
-    'Alongside engineering, community service defines who I am. From mentoring government school students across Dharmapuri district with Talent Quest for India and Bhumi, to serving as Overall Coordinator of SM Volunteers and Volunteer Leader with Atchayam Trust, I believe technology creates lasting value only when it serves people.',
+    'I am an Artificial Intelligence and Data Science graduate with a strong interest in software development, digital transformation, and social impact. I combine a technical mindset with hands-on experience turning community and operational needs into practical solutions.',
+    'Over the past four years, I have contributed to volunteering organizations, educational initiatives, community programs, and leadership activities. Across these experiences, I have coordinated teams and programs, supported educational initiatives, managed implementations, and worked closely with stakeholders. This has strengthened my team leadership, project coordination, stakeholder management, program implementation, problem-solving, communication, and community engagement.',
+    'My work spans full-stack and web application development, AI, data science, databases, ERP systems, dashboards, automation, and digital solutions. I enjoy building practical applications that solve real-world problems, improve workflows, and connect technology with people’s needs.',
+    'I currently work with BumbleB Trust, contributing to educational program implementation, technology integration, coordination, and field-level operations. My journey brings together technology, software development, leadership, and meaningful community impact.',
+  ],
+  aboutOrganizations: [
+    'SM Volunteers',
+    'Talent Quest for India (TQI)',
+    'Bhumi',
+    'Sarvam Educational Trust',
+    'Atchayam Trust',
+    'National Service Scheme (NSS)',
+    'Sittruli',
+  ],
+  technicalInterests: [
+    'Full-Stack Web Development',
+    'Artificial Intelligence',
+    'Data Science',
+    'Software Development',
+    'Web Application Development',
+    'Database Management',
+    'ERP Systems',
+    'Dashboard Development',
+    'Automation',
+    'Digital Solutions',
   ],
   highlights: [
-    { label: 'Focus', value: 'Full-Stack Engineering & Social Work' },
-    { label: 'Location', value: 'Tamil Nadu, India' },
-    { label: 'Degree', value: 'B.Tech AI & Data Science (2022–2026)' },
-    { label: 'Field Impact', value: 'Education, Rescue & Rural Outreach' },
+    { label: 'Focus', value: 'Full-Stack Development | AI | Data Science | Technology & Social Impact' },
+    { label: 'Experience', value: '4 Years of Community Leadership & Volunteering' },
+    { label: 'Current Organization', value: 'BumbleB Trust' },
+    { label: 'Field Impact', value: 'Education | Community Development | Technology' },
   ],
   contact: {
     email: 'naren2004dn@gmail.com',

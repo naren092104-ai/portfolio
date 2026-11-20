@@ -1,23 +1,27 @@
 import { motion } from 'motion/react';
-import { GraduationCap, MapPin } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 import { SectionHeading } from '../components/SectionHeading';
 import { PROFILE } from '../data/profile';
 
 const ABOUT_HIGHLIGHTS = [
-  'B.Tech in Artificial Intelligence and Data Science',
-  'K.S. Rangasamy College of Technology',
-  'practical software engineering',
-  'technology implementation',
-  'grassroots social impact',
-  'three and a half years',
-  'web platforms',
-  'institutional ERP systems',
-  'point-of-sale applications',
-  'volunteer management dashboards',
-  'Talent Quest for India',
-  'Overall Coordinator of SM Volunteers',
-  'Volunteer Leader with Atchayam Trust',
-  'Bhumi',
+  'Artificial Intelligence and Data Science graduate',
+  'software development',
+  'digital transformation',
+  'social impact',
+  'four years',
+  'BumbleB Trust',
+  'educational program implementation',
+  'technology integration',
+  'Full-Stack Web Development',
+  'Artificial Intelligence',
+  'Data Science',
+  'team leadership',
+  'project coordination',
+  'stakeholder management',
+  'program implementation',
+  'problem-solving',
+  'communication',
+  'community engagement',
 ];
 
 const ABOUT_HIGHLIGHT_PATTERN = new RegExp(
@@ -48,8 +52,8 @@ export function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           kicker="About Me"
-          title="Bridging practical engineering with real-world community impact."
-          description="Building dependable digital systems while staying rooted in education, mentorship, and grassroots outreach."
+          title="Technology, leadership, and social impact—built around people."
+          description="An AI & Data Science graduate combining software development with four years of community leadership and educational implementation."
         />
 
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
@@ -64,6 +68,39 @@ export function About() {
             {PROFILE.aboutParagraphs.map((para, idx) => (
               <p key={idx}>{renderAboutParagraph(para)}</p>
             ))}
+
+            <div className="space-y-3 pt-1">
+              <div>
+                <p className="mb-2 text-xs font-mono uppercase tracking-[0.16em] text-[#67E8F9]">
+                  Organizations & initiatives
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {PROFILE.aboutOrganizations.map((organization) => (
+                    <span
+                      key={organization}
+                      className="rounded-full border border-[#22D3EE]/20 bg-[#22D3EE]/[0.06] px-3 py-1.5 text-xs font-medium text-[#C7D2E0]"
+                    >
+                      {organization}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="mb-2 text-xs font-mono uppercase tracking-[0.16em] text-[#67E8F9]">
+                  Technology & development
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {PROFILE.technicalInterests.map((interest) => (
+                    <span
+                      key={interest}
+                      className="rounded-full border border-[#6366F1]/25 bg-[#6366F1]/[0.08] px-3 py-1.5 text-xs font-medium text-[#D8CCFF]"
+                    >
+                      {interest}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           {/* Education & Quick Facts Panel */}
@@ -84,38 +121,16 @@ export function About() {
                   <GraduationCap className="w-5 h-5 text-[#3B82F6]" aria-hidden="true" />
                 </div>
                 <div>
-                  <div className="mb-3 flex flex-wrap items-center gap-2">
-                    <span className="rounded-full border border-[#22D3EE]/25 bg-[#22D3EE]/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#67E8F9]">
-                      Expected passout
-                    </span>
-                    <span className="rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] px-3 py-1 text-sm font-bold text-white shadow-[0_0_18px_rgba(99,102,241,0.35)]">
-                      {PROFILE.education.expectedGraduation}
-                    </span>
-                    <span className="text-xs font-mono text-[#94A3B8]">{PROFILE.education.period}</span>
-                  </div>
+                  <p className="mb-2 text-xs font-mono uppercase tracking-[0.16em] text-[#67E8F9]">
+                    Education
+                  </p>
                   <h3 className="font-display text-base sm:text-lg font-bold text-[#F8FAFC] mt-0.5">
                     {PROFILE.education.degree}
                   </h3>
-                  <p className="text-sm text-[#A5B4C8] mt-1">{PROFILE.education.institution}</p>
-                  <div className="mt-3 grid grid-cols-3 gap-2">
-                    {PROFILE.education.academicHighlights.map((item) => (
-                      <div
-                        key={item.label}
-                        className="rounded-xl border border-white/10 bg-white/[0.04] px-2.5 py-2 text-center"
-                      >
-                        <p className="text-[10px] font-mono uppercase tracking-wider text-[#94A3B8]">
-                          {item.label}
-                        </p>
-                        <p className="mt-0.5 text-sm font-bold text-[#BAE6FD]">{item.value}</p>
-                      </div>
-                    ))}
-                  </div>
+                  <p className="mt-2 inline-flex rounded-full border border-[#22D3EE]/20 bg-[#22D3EE]/[0.07] px-3 py-1.5 text-xs font-semibold text-[#67E8F9]">
+                    Degree completed · {PROFILE.education.completed}
+                  </p>
                 </div>
-              </div>
-
-              <div className="pt-4 border-t border-slate-400/12 flex items-center gap-3 text-xs sm:text-sm text-[#CBD5E1]">
-                <MapPin className="w-4 h-4 text-[#8B5CF6] shrink-0" aria-hidden="true" />
-                <span>{PROFILE.location}</span>
               </div>
             </motion.div>
 
