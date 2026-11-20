@@ -17,10 +17,10 @@ export function Timeline({ entries }: { entries: ExperienceEntry[] }) {
           return (
             <motion.div
               key={entry.id}
-              initial={{ opacity: 0, x: -12 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.45, delay: idx * 0.06, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ x: -14 }}
+              whileInView={{ x: 0 }}
+              viewport={{ once: true, margin: '-48px' }}
+              transition={{ duration: 0.48, delay: idx * 0.055, ease: [0.16, 1, 0.3, 1] }}
               className="relative"
             >
               {/* Timeline Node Indicator */}

@@ -10,6 +10,7 @@ export function AmbientBackground() {
     restDelta: 0.001,
   });
   const iconLeft = useTransform(scaleX, [0, 1], ['0%', '98.5%']);
+  const networkY = useTransform(scrollYProgress, [0, 1], [0, -96]);
 
   const [pointer, setPointer] = useState({ x: -600, y: -600 });
 
@@ -48,7 +49,10 @@ export function AmbientBackground() {
         aria-hidden="true"
         className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#080914]"
       >
-        <div className="absolute inset-0 bg-grid-pattern opacity-60" />
+        <div className="absolute inset-0 bg-grid-pattern opacity-80" />
+        <div className="ambient-haze absolute inset-0" />
+        <motion.div className="ambient-network absolute inset-0" style={{ y: networkY }} />
+        <div className="ambient-starfield absolute inset-0" />
         <motion.div
           animate={{ x: [0, 30, 0], y: [0, -24, 0], scale: [1, 1.06, 1] }}
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}

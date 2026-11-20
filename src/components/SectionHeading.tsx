@@ -17,20 +17,16 @@ export function SectionHeading({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ y: 16 }}
+      whileInView={{ y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
       className={`mb-10 sm:mb-12 md:mb-14 ${isCenter ? 'text-center max-w-3xl mx-auto' : 'max-w-3xl'}`}
     >
       <div className={`flex items-center gap-3 mb-3 ${isCenter ? 'justify-center' : ''}`}>
-        <motion.span
-          initial={{ width: 0 }}
-          whileInView={{ width: 28 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+        <span
           aria-hidden="true"
-          className="h-[2px] rounded-full bg-gradient-to-r from-[#3B82F6] to-[#22D3EE]"
+          className="h-[2px] w-7 rounded-full bg-gradient-to-r from-[#3B82F6] to-[#22D3EE]"
         />
         <p className="text-xs font-mono font-medium tracking-[0.16em] text-[#22D3EE] uppercase">
           {kicker}

@@ -19,7 +19,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-slate-400/12 bg-[#060712]">
+    <footer className="relative z-10 border-t border-slate-400/12 bg-[#060712]">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#3B82F6]/45 to-transparent"

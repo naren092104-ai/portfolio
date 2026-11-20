@@ -130,10 +130,10 @@ export function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Outer Animated Neon Border Container */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ y: 18 }}
+          whileInView={{ y: 0 }}
+          viewport={{ once: true, margin: '-64px' }}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
           className="relative rounded-3xl p-[1.5px] bg-gradient-to-br from-[#3B82F6]/45 via-[#8B5CF6]/40 to-[#22D3EE]/45 shadow-[0_30px_100px_-25px_rgba(59,130,246,0.3)]"
         >
           {/* Animated Scanning Top Highlight Accent */}

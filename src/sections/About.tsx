@@ -16,8 +16,8 @@ export function About() {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Narrative */}
           <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 14 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7 space-y-5 text-sm sm:text-lg text-[#A5B4C8] leading-relaxed"
@@ -29,10 +29,10 @@ export function About() {
 
           {/* Education & Quick Facts Panel */}
           <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 14 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.5, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5 space-y-5"
           >
             <motion.div
@@ -64,10 +64,10 @@ export function About() {
               {PROFILE.highlights.map((item, idx) => (
                 <motion.div
                   key={item.label}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ y: 10 }}
+                  whileInView={{ y: 0 }}
                   whileHover={{ y: -3 }}
-                  viewport={{ once: true, margin: '-40px' }}
+                  viewport={{ once: true, margin: '-36px' }}
                   transition={{ duration: 0.35, delay: idx * 0.05 }}
                   className="glass-panel glass-panel-hover rounded-xl p-4"
                 >

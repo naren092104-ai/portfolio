@@ -89,10 +89,10 @@ export function Volunteering() {
             return (
               <motion.div
                 key={stat.id}
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.45, delay: idx * 0.06, ease: [0.16, 1, 0.3, 1] }}
+                initial={{ y: 12 }}
+                whileInView={{ y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.4, delay: idx * 0.055, ease: [0.16, 1, 0.3, 1] }}
                 className="glass-panel rounded-2xl p-6 relative overflow-hidden"
               >
                 <div
@@ -138,8 +138,8 @@ export function Volunteering() {
                     setSelectedOrg(isSelected ? 'all' : org.id);
                     setShowAllPhotos(true);
                   }}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ y: 12 }}
+                  whileInView={{ y: 0 }}
                   whileHover={{ y: -4 }}
                   viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.4, delay: idx * 0.04 }}
@@ -284,10 +284,11 @@ export function Volunteering() {
                   layout
                   type="button"
                   onClick={() => setLightboxIndex(idx)}
-                  initial={{ opacity: 0, y: 14, scale: 0.96 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  initial={{ y: 12, scale: 0.99 }}
+                  whileInView={{ y: 0, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.94 }}
                   whileHover={{ y: -4 }}
+                  viewport={{ once: true, margin: '-48px' }}
                   transition={{ duration: 0.32, delay: Math.min(idx * 0.025, 0.2) }}
                   aria-label={`Open photo: ${photo.caption}`}
                   className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-400/15 hover:border-[#3B82F6]/45 bg-[#111629] text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE]"

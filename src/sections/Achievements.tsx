@@ -34,10 +34,10 @@ export function Achievements() {
             return (
               <motion.article
                 key={award.id}
-                initial={{ opacity: 0, y: 18, scale: 0.98 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                initial={{ y: 14, scale: 0.99 }}
+                whileInView={{ y: 0, scale: 1 }}
                 whileHover={{ y: -5 }}
-                viewport={{ once: true, margin: '-50px' }}
+                viewport={{ once: true, margin: '-48px' }}
                 transition={{ duration: 0.45, delay: idx * 0.05, ease: [0.16, 1, 0.3, 1] }}
                 className="group glass-panel glass-panel-hover rounded-2xl overflow-hidden flex flex-col"
               >

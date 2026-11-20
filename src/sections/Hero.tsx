@@ -59,7 +59,7 @@ const FLOATING_POSITIONS: Record<
   string
 > = {
   'top-left': 'lg:top-[15%] lg:-left-14 xl:-left-20',
-  'top-right': 'lg:top-[22%] lg:-right-2 xl:-right-10',
+  'top-right': 'lg:top-[34%] lg:-right-6 xl:-right-28',
   'bottom-left': 'lg:bottom-[27%] lg:-left-16 xl:-left-24',
   'bottom-right': 'lg:bottom-[17%] lg:-right-2 xl:-right-8',
 };

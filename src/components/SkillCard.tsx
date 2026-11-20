@@ -188,10 +188,10 @@ function TechLogo({ id, accent }: { id: string; accent: string }) {
 export function SkillCard({ skill, index }: { skill: TechItem; index: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 14, scale: 0.97 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{ duration: 0.35, delay: index * 0.035, ease: [0.16, 1, 0.3, 1] }}
+      initial={{ y: 12, scale: 0.985 }}
+      whileInView={{ y: 0, scale: 1 }}
+      viewport={{ once: true, margin: '-36px' }}
+      transition={{ duration: 0.38, delay: Math.min(index * 0.035, 0.18), ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -5, scale: 1.02 }}
       className="group glass-panel glass-panel-hover rounded-xl p-4 flex items-center gap-3.5"
     >

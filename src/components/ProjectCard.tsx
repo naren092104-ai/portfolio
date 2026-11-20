@@ -15,12 +15,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <motion.article
       layout
-      initial={{ opacity: 0, y: 22, scale: 0.98 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, margin: '-40px' }}
+      initial={{ y: 18, scale: 0.985 }}
+      whileInView={{ y: 0, scale: 1 }}
+      viewport={{ once: true, margin: '-48px' }}
       whileHover={{ y: -6 }}
       exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.25), ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.48, delay: Math.min(index * 0.045, 0.24), ease: [0.16, 1, 0.3, 1] }}
       className="h-full group relative rounded-2xl glass-panel glass-panel-hover overflow-hidden flex flex-col"
     >
       {/* Subtle top-edge gradient accent on hover */}

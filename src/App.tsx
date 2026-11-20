@@ -15,10 +15,10 @@ import { ScrollToTop } from './components/ScrollToTop';
 export default function App() {
   return (
     <MotionConfig reducedMotion="user">
-      <div className="min-h-screen flex flex-col relative text-[#F8FAFC]">
+      <div className="relative isolate z-10 min-h-screen flex flex-col text-[#F8FAFC]">
         <AmbientBackground />
         <Navbar />
-        <main id="main-content" className="flex-1">
+        <main id="main-content" className="relative z-10 flex-1">
           <Hero />
           <About />
           <TechStack />

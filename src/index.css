@@ -12,6 +12,7 @@
     color: #F8FAFC;
     font-family: var(--font-sans);
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
 
   body {
@@ -57,6 +58,41 @@
   background-size: 56px 56px;
 }
 
+.ambient-starfield {
+  background-image:
+    radial-gradient(2px 2px at 24px 38px, rgba(125, 211, 252, 0.82) 45%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 112px 86px, rgba(196, 181, 253, 0.78) 45%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 68px 154px, rgba(248, 250, 252, 0.7) 45%, transparent 100%),
+    radial-gradient(2px 2px at 188px 202px, rgba(34, 211, 238, 0.76) 45%, transparent 100%);
+  background-size: 180px 190px;
+  opacity: 0.48;
+  mask-image: linear-gradient(to bottom, transparent, black 14%, black 82%, transparent);
+  animation: starfieldTwinkle 9s ease-in-out infinite alternate;
+}
+
+.ambient-haze {
+  background:
+    radial-gradient(ellipse at 17% 8%, rgba(59, 130, 246, 0.14), transparent 38%),
+    radial-gradient(ellipse at 86% 52%, rgba(139, 92, 246, 0.13), transparent 40%),
+    radial-gradient(ellipse at 50% 100%, rgba(34, 211, 238, 0.08), transparent 38%);
+}
+
+.ambient-network {
+  background: url('/assets/ambient-network.svg') center top / cover no-repeat;
+  opacity: 0.68;
+  mix-blend-mode: screen;
+  mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
+}
+
+@keyframes starfieldTwinkle {
+  from {
+    opacity: 0.34;
+  }
+  to {
+    opacity: 0.58;
+  }
+}
+
 @keyframes marqueeScroll {
   0% {
     transform: translate3d(0, 0, 0);
@@ -92,6 +128,10 @@
   }
 
   .animate-marquee {
+    animation: none;
+  }
+
+  .ambient-starfield {
     animation: none;
   }
 }
