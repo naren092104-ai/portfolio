@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import type { TechItem } from '../data/skills';
+import type { TechItem } from '../../data/skills';
 
 function TechLogo({ id, accent }: { id: string; accent: string }) {
   switch (id) {

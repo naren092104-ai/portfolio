@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { GraduationCap } from 'lucide-react';
-import { SectionHeading } from '../components/SectionHeading';
-import { PROFILE } from '../data/profile';
+import { SectionHeading } from '../components/common/SectionHeading';
+import { PROFILE } from '../data/personal';
 
 const ABOUT_HIGHLIGHTS = [
   'Artificial Intelligence and Data Science graduate',

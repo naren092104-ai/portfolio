@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react';
 import { motion } from 'motion/react';
 import { Award, Expand } from 'lucide-react';
-import { SectionHeading } from '../components/SectionHeading';
-import { Lightbox, type LightboxItem } from '../components/Lightbox';
+import { SectionHeading } from '../components/common/SectionHeading';
+import { Lightbox, type LightboxItem } from '../components/common/Lightbox';
 import { ACHIEVEMENTS } from '../data/achievements';
 import { getThumbnailSrc } from '../utils/images';
 

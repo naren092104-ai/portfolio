@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight, Globe } from 'lucide-react';
-import type { ProjectItem } from '../data/projects';
-import { getThumbnailSrc } from '../utils/images';
+import type { ProjectItem } from '../../data/projects';
+import { getThumbnailSrc } from '../../utils/images';
 
 interface ProjectCardProps {
   project: ProjectItem;

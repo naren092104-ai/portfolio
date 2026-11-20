@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { ChevronLeft, ChevronRight, LayoutGrid, PlaySquare } from 'lucide-react';
-import { SectionHeading } from '../components/SectionHeading';
-import { ProjectCard } from '../components/ProjectCard';
+import { SectionHeading } from '../components/common/SectionHeading';
+import { ProjectCard } from '../components/cards/ProjectCard';
 import { PROJECT_FILTERS, PROJECTS, type ProjectFilter } from '../data/projects';
 
 export function Projects() {

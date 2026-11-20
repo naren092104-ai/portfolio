@@ -1,5 +1,5 @@
-import { SectionHeading } from '../components/SectionHeading';
-import { Timeline } from '../components/Timeline';
+import { SectionHeading } from '../components/common/SectionHeading';
+import { Timeline } from '../components/cards/Timeline';
 import { EXPERIENCES } from '../data/experience';
 
 export function Experience() {

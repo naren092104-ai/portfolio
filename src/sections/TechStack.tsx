@@ -1,5 +1,5 @@
-import { SectionHeading } from '../components/SectionHeading';
-import { SkillCard } from '../components/SkillCard';
+import { SectionHeading } from '../components/common/SectionHeading';
+import { SkillCard } from '../components/cards/SkillCard';
 import { SKILLS, TECH_CATEGORIES } from '../data/skills';
 
 export function TechStack() {

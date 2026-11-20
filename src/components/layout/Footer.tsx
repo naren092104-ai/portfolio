@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowUp, Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
-import { PROFILE } from '../data/profile';
+import { PROFILE } from '../../data/personal';
 
 const FOOTER_LINKS = [
   { label: 'Home', href: '#home' },

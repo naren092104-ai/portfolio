@@ -8,9 +8,9 @@ import {
   GraduationCap,
   ShieldCheck,
 } from 'lucide-react';
-import { SectionHeading } from '../components/SectionHeading';
-import { AnimatedCounter } from '../components/AnimatedCounter';
-import { Lightbox, type LightboxItem } from '../components/Lightbox';
+import { SectionHeading } from '../components/common/SectionHeading';
+import { AnimatedCounter } from '../components/common/AnimatedCounter';
+import { Lightbox, type LightboxItem } from '../components/common/Lightbox';
 import { getThumbnailSrc } from '../utils/images';
 import {
   IMPACT_STATS,

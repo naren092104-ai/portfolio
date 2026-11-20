@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 768">
+  <defs>
+    <linearGradient id="ring" x1=".08" y1=".18" x2=".92" y2=".82">
+      <stop offset="0" stop-color="#d946ef"/>
+      <stop offset=".48" stop-color="#7c3cff"/>
+      <stop offset=".72" stop-color="#00c8ff"/>
+      <stop offset="1" stop-color="#d946ef"/>
+    </linearGradient>
+    <linearGradient id="purple" x1=".2" y1="0" x2=".85" y2="1">
+      <stop stop-color="#e34aff"/>
+      <stop offset=".48" stop-color="#a000ff"/>
+      <stop offset="1" stop-color="#6546ff"/>
+    </linearGradient>
+    <linearGradient id="silver" x1=".15" y1="0" x2=".8" y2="1">
+      <stop stop-color="#fff"/>
+      <stop offset=".55" stop-color="#f5f4fb"/>
+      <stop offset="1" stop-color="#a8aabd"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="768" height="768" rx="140" fill="#030316"/>
+  <circle cx="384" cy="382" r="304" fill="none" stroke="url(#ring)" stroke-width="5" filter="url(#glow)"/>
+  <path d="M408 435 C492 383 573 321 605 273 C623 247 616 230 594 227 C567 222 526 234 479 247 C530 225 579 216 604 229 C635 245 615 282 586 314 C543 361 476 410 408 435Z" fill="#13d9f6"/>
+  <path d="M411 432 C336 456 258 484 194 510 C164 522 141 527 139 510 C136 493 151 474 177 454 C145 470 127 494 139 514 C152 538 185 528 215 519 C287 498 359 462 411 432Z" fill="#13d9f6"/>
+  <path d="M359 267 H496 C555 267 598 309 598 379 C598 449 555 502 496 502 H415 L428 449 H486 C523 449 550 421 550 382 C550 342 523 315 486 315 H410Z" fill="url(#purple)"/>
+  <path d="M183 268 L410 426 V502 L234 375 V501 L183 502Z" fill="url(#silver)"/>
+  <path d="M183 268 L234 300 V375 L183 449Z" fill="#fff"/>
+  <path d="M359 267 L410 315 V426 L359 373Z" fill="url(#silver)"/>
+</svg>

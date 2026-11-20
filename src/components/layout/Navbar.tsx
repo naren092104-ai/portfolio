@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { Download, Menu, X } from 'lucide-react';
-import { PROFILE } from '../data/profile';
-import { downloadResume } from '../utils/resume';
+import { PROFILE } from '../../data/personal';
+import { downloadResume } from '../../utils/resume';
 
 const NAV_ITEMS = [
   { id: 'home', label: 'Home', href: '#home' },

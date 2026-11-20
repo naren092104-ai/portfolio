@@ -11,7 +11,7 @@ import {
   Settings,
   Users,
 } from 'lucide-react';
-import { PROFILE } from '../data/profile';
+import { PROFILE } from '../data/personal';
 import { downloadResume } from '../utils/resume';
 
 const FLOATING_BADGE_STYLES: Record<

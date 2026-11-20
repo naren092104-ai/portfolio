@@ -12,7 +12,7 @@ import {
   Phone,
   Send,
 } from 'lucide-react';
-import { PROFILE } from '../data/profile';
+import { PROFILE } from '../data/personal';
 
 interface FormValues {
   name: string;

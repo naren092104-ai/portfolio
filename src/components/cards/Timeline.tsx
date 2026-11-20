@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Briefcase, HeartHandshake } from 'lucide-react';
-import type { ExperienceEntry } from '../data/experience';
+import type { ExperienceEntry } from '../../data/experience';
 
 export function Timeline({ entries }: { entries: ExperienceEntry[] }) {
   return (
