@@ -1,4 +1,4 @@
-import resumePdfDataUrl from '../assets/Narendhar_D_Resume.pdf?inline';
+import resumePdfUrl from '../assets/Narendhar_D_Resume.pdf?url';
 
 export const RESUME_FILENAME = 'Narendhar_D_Resume.pdf';
 
@@ -15,10 +15,10 @@ function dataUrlToPdfBlob(dataUrl: string): Blob {
 export async function downloadResume(): Promise<void> {
   try {
     let blob: Blob;
-    if (resumePdfDataUrl.startsWith('data:')) {
-      blob = dataUrlToPdfBlob(resumePdfDataUrl);
+    if (resumePdfUrl.startsWith('data:')) {
+      blob = dataUrlToPdfBlob(resumePdfUrl);
     } else {
-      const response = await fetch(resumePdfDataUrl, { credentials: 'same-origin' });
+      const response = await fetch(resumePdfUrl, { credentials: 'same-origin' });
       if (!response.ok) {
         throw new Error('Failed to fetch resume asset');
       }

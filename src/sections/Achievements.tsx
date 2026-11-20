@@ -4,6 +4,7 @@ import { Award, Expand } from 'lucide-react';
 import { SectionHeading } from '../components/SectionHeading';
 import { Lightbox, type LightboxItem } from '../components/Lightbox';
 import { ACHIEVEMENTS } from '../data/achievements';
+import { getThumbnailSrc } from '../utils/images';
 
 export function Achievements() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -48,7 +49,7 @@ export function Achievements() {
                     className="relative aspect-[4/3] w-full overflow-hidden bg-[#080914] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE]"
                   >
                     <img
-                      src={award.image}
+                      src={getThumbnailSrc(award.image)}
                       alt={`${award.title} — ${award.organization}`}
                       loading="lazy"
                       referrerPolicy="no-referrer"

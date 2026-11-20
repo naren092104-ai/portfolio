@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-declare module '*.pdf?inline' {
+declare module '*.pdf?url' {
   const src: string;
   export default src;
 }

@@ -11,6 +11,7 @@ import {
 import { SectionHeading } from '../components/SectionHeading';
 import { AnimatedCounter } from '../components/AnimatedCounter';
 import { Lightbox, type LightboxItem } from '../components/Lightbox';
+import { getThumbnailSrc } from '../utils/images';
 import {
   IMPACT_STATS,
   VOLUNTEERING_ORGS,
@@ -248,7 +249,7 @@ export function Volunteering() {
                         className="group relative w-60 sm:w-72 aspect-[4/3] shrink-0 overflow-hidden rounded-xl border border-slate-400/15 bg-[#111629] text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE]"
                       >
                         <img
-                          src={photo.src}
+                          src={getThumbnailSrc(photo.src)}
                           alt={photo.caption}
                           loading="lazy"
                           referrerPolicy="no-referrer"
@@ -292,9 +293,9 @@ export function Volunteering() {
                   className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-400/15 hover:border-[#3B82F6]/45 bg-[#111629] text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE]"
                 >
                   <img
-                    src={photo.src}
+                    src={getThumbnailSrc(photo.src)}
                     alt={photo.caption}
-                    loading={idx < 6 ? 'eager' : 'lazy'}
+                    loading="lazy"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                   />

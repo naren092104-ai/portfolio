@@ -315,6 +315,14 @@ export function Hero() {
               transition={{ duration: 0.75, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-64 sm:w-80 lg:w-[360px] xl:w-[400px] flex items-end justify-center"
             >
+              {/* Soft face light keeps the portrait clear against the dark hero */}
+              <motion.div
+                aria-hidden="true"
+                animate={{ opacity: [0.35, 0.58, 0.35], scale: [0.96, 1.04, 0.96] }}
+                transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}
+                className="pointer-events-none absolute top-[2%] left-1/2 -translate-x-1/2 w-52 h-48 rounded-full bg-[#38BDF8]/24 blur-[75px]"
+              />
+
               {/* Dual Electric Blue & Magenta-Purple Backlight Aura Behind Shoulders */}
               <motion.div
                 aria-hidden="true"
@@ -334,10 +342,12 @@ export function Hero() {
               />
 
               {/* Seamless Background-Free Cutout Portrait */}
-              <img
+              <motion.img
                 src={PROFILE.portraitSrc}
                 alt="Portrait of Narendhar D"
-                className="relative z-10 w-full h-auto max-h-[540px] sm:max-h-[600px] lg:max-h-[640px] object-contain object-bottom select-none drop-shadow-[0_12px_40px_rgba(59,130,246,0.28)] [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]"
+                animate={{ y: [0, -9, 0], scale: [1, 1.035, 1] }}
+                transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
+                className="relative z-10 w-full h-auto max-h-[540px] sm:max-h-[600px] lg:max-h-[640px] object-contain object-bottom select-none brightness-[1.1] contrast-[1.04] drop-shadow-[0_12px_40px_rgba(59,130,246,0.34)] [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]"
               />
 
               {/* Desktop Floating Glass Badges Positioned Cleanly Around Shoulders & Arms */}

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight, Globe } from 'lucide-react';
 import type { ProjectItem } from '../data/projects';
+import { getThumbnailSrc } from '../utils/images';
 
 interface ProjectCardProps {
   project: ProjectItem;
@@ -53,9 +54,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         <div className="relative w-full h-[calc(100%-33px)] overflow-hidden">
           {!imgError ? (
             <img
-              src={project.image}
+              src={getThumbnailSrc(project.image)}
               alt={`${project.title} live website preview`}
-              loading={index < 3 ? 'eager' : 'lazy'}
+              loading="lazy"
               referrerPolicy="no-referrer"
               onError={() => setImgError(true)}
               className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.06]"
