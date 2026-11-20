@@ -1,0 +1,87 @@
+import { useEffect, useState } from 'react';
+import { motion, useScroll, useSpring, useTransform } from 'motion/react';
+import { Rocket } from 'lucide-react';
+
+export function AmbientBackground() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 180,
+    damping: 28,
+    restDelta: 0.001,
+  });
+  const iconLeft = useTransform(scaleX, [0, 1], ['0%', '98.5%']);
+
+  const [pointer, setPointer] = useState({ x: -600, y: -600 });
+
+  useEffect(() => {
+    const media = window.matchMedia('(pointer: fine)');
+    if (!media.matches) return;
+
+    const handleMove = (e: MouseEvent) => {
+      setPointer({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMove, { passive: true });
+    return () => window.removeEventListener('mousemove', handleMove);
+  }, []);
+
+  return (
+    <>
+      {/* Top Scroll Progress Indicator + Moving Beacon Icon */}
+      <div aria-hidden="true" className="pointer-events-none fixed top-0 left-0 right-0 z-[60] h-6">
+        <motion.div
+          style={{ scaleX }}
+          className="h-[3px] w-full origin-left bg-gradient-to-r from-[#3B82F6] via-[#8B5CF6] to-[#22D3EE] shadow-[0_0_12px_rgba(34,211,238,0.6)]"
+        />
+        <motion.div
+          style={{ left: iconLeft }}
+          className="absolute top-[1px] -translate-x-1/2 flex items-center justify-center"
+        >
+          <span className="relative flex items-center justify-center w-5 h-5 rounded-full bg-[#0B1024]/95 border border-[#22D3EE]/70 shadow-[0_0_14px_rgba(34,211,238,0.85)]">
+            <Rocket className="w-3 h-3 text-[#22D3EE] rotate-45" />
+          </span>
+        </motion.div>
+      </div>
+
+      {/* Ambient Deep Space Canvas & Subtle Architectural Grid */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#080914]"
+      >
+        <div className="absolute inset-0 bg-grid-pattern opacity-60" />
+        <motion.div
+          animate={{ x: [0, 30, 0], y: [0, -24, 0], scale: [1, 1.06, 1] }}
+          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute -top-56 left-1/4 h-[620px] w-[620px] rounded-full opacity-25 blur-[130px]"
+          style={{
+            background: 'radial-gradient(circle, rgba(59,130,246,0.45) 0%, transparent 70%)',
+          }}
+        />
+        <motion.div
+          animate={{ x: [0, -32, 0], y: [0, 26, 0], scale: [1, 1.05, 1] }}
+          transition={{ duration: 19, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+          className="absolute top-1/3 -right-40 h-[560px] w-[560px] rounded-full opacity-20 blur-[140px]"
+          style={{
+            background: 'radial-gradient(circle, rgba(139,92,246,0.45) 0%, transparent 70%)',
+          }}
+        />
+        <motion.div
+          animate={{ x: [0, 20, 0], y: [0, -20, 0] }}
+          transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
+          className="absolute -bottom-56 left-1/3 h-[540px] w-[540px] rounded-full opacity-15 blur-[140px]"
+          style={{
+            background: 'radial-gradient(circle, rgba(34,211,238,0.35) 0%, transparent 70%)',
+          }}
+        />
+
+        {/* Subtle Desktop Cursor Spotlight */}
+        <div
+          className="hidden lg:block fixed inset-0 transition-opacity duration-300"
+          style={{
+            background: `radial-gradient(520px circle at ${pointer.x}px ${pointer.y}px, rgba(59, 130, 246, 0.06), transparent 65%)`,
+          }}
+        />
+      </div>
+    </>
+  );
+}
