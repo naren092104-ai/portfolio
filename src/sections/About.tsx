@@ -45,12 +45,32 @@ export function About() {
                   <GraduationCap className="w-5 h-5 text-[#3B82F6]" aria-hidden="true" />
                 </div>
                 <div>
-                  <p className="text-xs font-mono text-[#22D3EE]">{PROFILE.education.period}</p>
+                  <div className="mb-3 flex flex-wrap items-center gap-2">
+                    <span className="rounded-full border border-[#22D3EE]/25 bg-[#22D3EE]/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#67E8F9]">
+                      Expected passout
+                    </span>
+                    <span className="rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] px-3 py-1 text-sm font-bold text-white shadow-[0_0_18px_rgba(99,102,241,0.35)]">
+                      {PROFILE.education.expectedGraduation}
+                    </span>
+                    <span className="text-xs font-mono text-[#94A3B8]">{PROFILE.education.period}</span>
+                  </div>
                   <h3 className="font-display text-base sm:text-lg font-bold text-[#F8FAFC] mt-0.5">
                     {PROFILE.education.degree}
                   </h3>
                   <p className="text-sm text-[#A5B4C8] mt-1">{PROFILE.education.institution}</p>
-                  <p className="text-xs font-mono text-[#93C5FD] mt-2">{PROFILE.education.grade}</p>
+                  <div className="mt-3 grid grid-cols-3 gap-2">
+                    {PROFILE.education.academicHighlights.map((item) => (
+                      <div
+                        key={item.label}
+                        className="rounded-xl border border-white/10 bg-white/[0.04] px-2.5 py-2 text-center"
+                      >
+                        <p className="text-[10px] font-mono uppercase tracking-wider text-[#94A3B8]">
+                          {item.label}
+                        </p>
+                        <p className="mt-0.5 text-sm font-bold text-[#BAE6FD]">{item.value}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 

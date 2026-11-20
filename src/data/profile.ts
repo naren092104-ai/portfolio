@@ -15,7 +15,8 @@ export interface ProfileData {
     degree: string;
     institution: string;
     period: string;
-    grade: string;
+    expectedGraduation: string;
+    academicHighlights: { label: string; value: string }[];
   };
   aboutParagraphs: string[];
   highlights: {
@@ -71,7 +72,12 @@ export const PROFILE: ProfileData = {
     degree: 'B.Tech in Artificial Intelligence and Data Science',
     institution: 'K.S. Rangasamy College of Technology, Tiruchengode',
     period: '2022 – 2026',
-    grade: 'CGPA 7.48 · HSC 95% · SSLC 83%',
+    expectedGraduation: '2026',
+    academicHighlights: [
+      { label: 'CGPA', value: '7.48' },
+      { label: 'HSC', value: '95%' },
+      { label: 'SSLC', value: '83%' },
+    ],
   },
   aboutParagraphs: [
     'I work at the intersection of practical software engineering, technology implementation, and grassroots social impact. Pursuing a B.Tech in Artificial Intelligence and Data Science at K.S. Rangasamy College of Technology, I have paired academic grounding in software systems with over three and a half years of active field leadership across Tamil Nadu.',
