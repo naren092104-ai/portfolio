@@ -6,21 +6,10 @@ import { PROFILE } from '../data/personal';
 const ABOUT_HIGHLIGHTS = [
   'Artificial Intelligence and Data Science graduate',
   'software development',
-  'digital transformation',
   'social impact',
   'four years',
   'BumbleB Trust',
-  'educational program implementation',
-  'technology integration',
-  'Full-Stack Web Development',
-  'Artificial Intelligence',
-  'Data Science',
   'team leadership',
-  'project coordination',
-  'stakeholder management',
-  'program implementation',
-  'problem-solving',
-  'communication',
   'community engagement',
 ];
 
@@ -36,7 +25,7 @@ function renderAboutParagraph(text: string) {
     highlightedPhrases.has(part.toLowerCase()) ? (
       <span
         key={`${part}-${index}`}
-        className="font-semibold text-[#67E8F9] decoration-[#22D3EE]/40 underline decoration-1 underline-offset-4"
+        className="font-semibold text-[#67E8F9]"
       >
         {part}
       </span>

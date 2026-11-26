@@ -43,6 +43,20 @@ export const PROJECTS: ProjectItem[] = [
     span: 'wide',
   },
   {
+    id: 'kalvi40-offerletter',
+    title: 'KALVI40 Offer Letter Automation',
+    subtitle: 'Teaching Coordinator Appointment & Offer Automation',
+    description:
+      'Secure administrator portal for generating verified BumbleB Trust engagement letters, importing candidates from Excel, managing CC governance, and dispatching personalized offer letters with pre-send database, email, and PDF verification.',
+    url: 'https://offerletter-kalvi40.pages.dev/',
+    image: '/assets/projects/kalvi40.png',
+    primaryCategory: 'ERP',
+    categories: ['ERP', 'Social Impact', 'Web Development'],
+    technologies: ['React', 'Cloudflare Pages', 'Email & PDF Automation'],
+    featured: true,
+    span: 'wide',
+  },
+  {
     id: 'tqi-erp',
     title: 'TQI Academic ERP',
     subtitle: 'Talent Quest for India Cluster Administration',

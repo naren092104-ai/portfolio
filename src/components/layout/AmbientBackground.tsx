@@ -26,7 +26,7 @@ export function AmbientBackground() {
         aria-hidden="true"
         className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#080914]"
       >
-        <div className="absolute inset-0 bg-grid-pattern opacity-80" />
+        <div className="absolute inset-0 bg-grid-pattern opacity-45" />
         <div className="ambient-haze absolute inset-0" />
         <motion.div className="ambient-network absolute inset-0" style={{ y: networkY }} />
         <div className="ambient-starfield absolute inset-0" />

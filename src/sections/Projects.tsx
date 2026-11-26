@@ -38,7 +38,7 @@ export function Projects() {
             <SectionHeading
               kicker="Selected Work"
               title="Live systems, ERPs, and digital products."
-              description="Eight production applications built for educational networks, volunteer organizations, retail operations, scientific research, and local enterprises."
+              description="Nine production applications built for educational networks, volunteer organizations, retail operations, scientific research, and local enterprises."
             />
           </div>
 

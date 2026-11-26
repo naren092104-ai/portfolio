@@ -65,7 +65,7 @@
     radial-gradient(1.5px 1.5px at 68px 154px, rgba(248, 250, 252, 0.7) 45%, transparent 100%),
     radial-gradient(2px 2px at 188px 202px, rgba(34, 211, 238, 0.76) 45%, transparent 100%);
   background-size: 180px 190px;
-  opacity: 0.48;
+  opacity: 0.36;
   mask-image: linear-gradient(to bottom, transparent, black 14%, black 82%, transparent);
   animation: starfieldTwinkle 9s ease-in-out infinite alternate;
 }
@@ -79,9 +79,9 @@
 
 .ambient-network {
   background: url('/assets/ambient-network.svg') center top / cover no-repeat;
-  opacity: 0.68;
+  opacity: 0.3;
   mix-blend-mode: screen;
-  mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 58%, transparent 92%);
 }
 
 @keyframes starfieldTwinkle {

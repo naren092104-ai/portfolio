@@ -120,15 +120,28 @@ export function Navbar() {
             <span>Download Resume</span>
           </button>
 
-          <button
+          <motion.button
             type="button"
             aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={mobileOpen}
             onClick={() => setMobileOpen((prev) => !prev)}
+            whileTap={{ scale: 0.9, rotate: mobileOpen ? -8 : 8 }}
+            transition={{ type: 'spring', stiffness: 420, damping: 22 }}
             className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-slate-400/20 bg-[#111629]/80 text-[#F8FAFC] hover:border-[#3B82F6]/50 transition-colors"
           >
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.span
+                key={mobileOpen ? 'close' : 'open'}
+                initial={{ opacity: 0, rotate: -35, scale: 0.7 }}
+                animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                exit={{ opacity: 0, rotate: 35, scale: 0.7 }}
+                transition={{ duration: 0.16 }}
+                className="flex"
+              >
+                {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </motion.span>
+            </AnimatePresence>
+          </motion.button>
         </div>
       </div>
 
@@ -136,20 +149,24 @@ export function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0, y: -10, scale: 0.985 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -8, scale: 0.99 }}
+            transition={{ duration: 0.24, ease: [0.16, 1, 0.3, 1] }}
             className="lg:hidden border-b border-slate-400/15 bg-[#0B0E1D]/95 backdrop-blur-2xl"
           >
             <nav aria-label="Mobile Navigation" className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
               {NAV_ITEMS.map((item) => {
                 const isActive = activeId === item.id;
                 return (
-                  <a
+                  <motion.a
                     key={item.id}
                     href={item.href}
                     onClick={() => handleNavClick(item.id)}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.2, delay: 0.035 * NAV_ITEMS.indexOf(item) }}
+                    whileTap={{ scale: 0.985 }}
                     className={`px-3.5 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                       isActive
                         ? 'bg-[#3B82F6]/15 text-white border border-[#3B82F6]/30'
@@ -157,7 +174,7 @@ export function Navbar() {
                     }`}
                   >
                     {item.label}
-                  </a>
+                  </motion.a>
                 );
               })}
               <button
